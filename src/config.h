@@ -38,7 +38,7 @@ typedef struct config Config;
 int getConfigs(Config *config);
 
 //Returns an Config structure, all set up
-Config initConfigs();
+Config* initConfigs();
 
 //List Configs:
 void print_config(const Config *config);

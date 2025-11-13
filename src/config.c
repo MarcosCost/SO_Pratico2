@@ -54,13 +54,14 @@ int getConfigs(Config* config){
     return 1;
 }
 
-Config initConfigs(){
-    Config config;  
+Config* initConfigs(){
+    static Config config;   //static makes it so there is a single shared instance of config
+
     //Inicialize config to 0s to avoid garbage data
     memset(&config, 0, sizeof(Config));
 
     getConfigs(&config);
-    return config;
+    return &config;
 }
 
 void print_config(const Config *config) {
@@ -87,6 +88,6 @@ mb get_cache_size(Config* config)          { return config->cache_size; }
 secs get_timeout(Config* config)           { return config->timeout; }
 
 int main(void){
-    Config cfg = initConfigs();
-    print_config(&cfg);
+    Config* cfg = initConfigs();
+    print_config(cfg);
 }
