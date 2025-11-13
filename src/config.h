@@ -46,11 +46,11 @@ void print_config(const Config *config);
 ///Getters
 //Parameter: adress & of config obj
 int get_port(Config* config);  
-char* get_document_root(Config* config);
+const char* get_document_root(Config* config);
 int get_num_workers(Config* config);
 int get_thread_per_worker(Config* config);
 int get_max_queue(Config* config);
-char* get_log_file(Config* config);
+const char* get_log_file(Config* config);
 mb get_cache_size(Config* config);
 secs get_timeout(Config* config);
 

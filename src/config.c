@@ -79,10 +79,10 @@ void print_config(const Config *config) {
 
 //Getters
 int get_port(Config* config)               { return config->port; }
-char* get_document_root(Config* config)    { return config->document_root; }
+const char* get_document_root(Config* config)    { return config->document_root; }
 int get_num_workers(Config* config)        { return config->num_workers; }
 int get_thread_per_worker(Config* config)  { return config->thread_per_worker; }
 int get_max_queue(Config* config)          { return config->max_queue; }
-char* get_log_file(Config* config)         { return config->log_file; }
+const char* get_log_file(Config* config)         { return config->log_file; }
 mb get_cache_size(Config* config)          { return config->cache_size; }
 secs get_timeout(Config* config)           { return config->timeout; }
