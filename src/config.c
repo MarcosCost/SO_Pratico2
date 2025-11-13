@@ -86,8 +86,3 @@ int get_max_queue(Config* config)          { return config->max_queue; }
 char* get_log_file(Config* config)         { return config->log_file; }
 mb get_cache_size(Config* config)          { return config->cache_size; }
 secs get_timeout(Config* config)           { return config->timeout; }
-
-int main(void){
-    Config* cfg = initConfigs();
-    print_config(cfg);
-}
